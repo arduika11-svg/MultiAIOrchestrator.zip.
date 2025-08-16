@@ -1,0 +1,31 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout android:orientation="vertical" android:padding="16dp"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <TextView android:text="Connections (API Keys & Endpoints)" android:textSize="18sp"/>
+
+    <TextView android:text="Worker Base URL" android:paddingTop="8dp"/>
+    <EditText android:id="@+id/etWorker" android:hint="https://your-worker.workers.dev" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:text="OpenAI API Key" android:paddingTop="12dp"/>
+    <EditText android:id="@+id/etOpenAI" android:hint="sk-..." android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:text="OpenAI Endpoint (optional)"/>
+    <EditText android:id="@+id/etOpenAIUrl" android:hint="https://api.openai.com/v1" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:text="Grok API Key" android:paddingTop="12dp"/>
+    <EditText android:id="@+id/etGrok" android:hint="grok-..." android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:text="Grok Endpoint (optional)"/>
+    <EditText android:id="@+id/etGrokUrl" android:hint="https://api.x.ai/v1" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <TextView android:text="Gemini API Key" android:paddingTop="12dp"/>
+    <EditText android:id="@+id/etGemini" android:hint="AIza..." android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:text="Gemini Endpoint (optional)"/>
+    <EditText android:id="@+id/etGeminiUrl" android:hint="https://generativelanguage.googleapis.com" android:inputType="textUri" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="16dp">
+      <Button android:id="@+id/btnTest" android:text="Test"/>
+      <Button android:id="@+id/btnSave" android:text="Save" android:layout_marginStart="12dp"/>
+    </LinearLayout>
+  </LinearLayout>
+</ScrollView>
