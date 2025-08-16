@@ -1,0 +1,54 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+  <LinearLayout
+      android:orientation="vertical" android:padding="16dp"
+      android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <EditText
+        android:id="@+id/etPrompt"
+        android:hint="რა დავალება გვაქვს?"
+        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+      <CheckBox android:id="@+id/tOpenAI" android:text="OpenAI" android:checked="true"/>
+      <CheckBox android:id="@+id/tGrok"   android:text="Grok"   android:layout_marginStart="12dp" android:checked="true"/>
+      <CheckBox android:id="@+id/tGemini" android:text="Gemini" android:layout_marginStart="12dp" android:checked="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+      <Switch
+          android:id="@+id/switchCoop"
+          android:text="Co-op (მრავალტურიანი)"
+          android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+      <EditText
+          android:id="@+id/etRounds"
+          android:hint="Rounds (ციფრი; ცარიელი=1)"
+          android:inputType="number"
+          android:layout_marginStart="12dp"
+          android:layout_width="0dp" android:layout_weight="1"
+          android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+      <Button android:id="@+id/btnAskAll"     android:text="Ask All"/>
+      <Button android:id="@+id/btnAskOpenAI"  android:text="OpenAI" android:layout_marginStart="8dp"/>
+      <Button android:id="@+id/btnAskGrok"    android:text="Grok"    android:layout_marginStart="8dp"/>
+      <Button android:id="@+id/btnAskGemini"  android:text="Gemini"  android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <TextView android:id="@+id/status"     android:text="მზადაა (გრძელი დაჭერა = Connections)"  android:layout_marginTop="12dp"/>
+    <TextView android:id="@+id/rawOpenAI"  android:text="OpenAI: —" android:layout_marginTop="6dp"/>
+    <TextView android:id="@+id/rawGrok"    android:text="Grok: —"   android:layout_marginTop="6dp"/>
+    <TextView android:id="@+id/rawGemini"  android:text="Gemini: —" android:layout_marginTop="6dp"/>
+    <TextView android:id="@+id/unified"    android:text="მოლოდინი…" android:layout_marginTop="10dp"/>
+  </LinearLayout>
+</ScrollView>

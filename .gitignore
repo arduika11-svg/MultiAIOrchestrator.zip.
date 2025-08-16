@@ -1,0 +1,4 @@
+*.zip
+.git-credentials
+.gitconfig
+.bash_history

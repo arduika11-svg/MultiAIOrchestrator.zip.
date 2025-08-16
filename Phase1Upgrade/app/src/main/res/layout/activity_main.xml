@@ -1,0 +1,29 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent" android:layout_height="match_parent">
+ <LinearLayout android:orientation="vertical" android:padding="16dp"
+   android:layout_width="match_parent" android:layout_height="wrap_content">
+   <TextView android:text="Phase-1 Orchestrator" android:textSize="20sp" android:paddingBottom="8dp"/>
+   <EditText android:id="@+id/input" android:hint="შეიყვანე კითხვა" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+   <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp">
+     <CheckBox android:id="@+id/toggleOpenAI" android:text="OpenAI" android:checked="true"/>
+     <CheckBox android:id="@+id/toggleGrok" android:text="Grok" android:checked="true" android:layout_marginStart="16dp"/>
+     <CheckBox android:id="@+id/toggleGemini" android:text="Gemini" android:checked="true" android:layout_marginStart="16dp"/>
+   </LinearLayout>
+   <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingTop="8dp">
+     <Button android:id="@+id/btnAskAll" android:text="Ask all"/>
+     <Button android:id="@+id/btnAskOpenAI" android:text="Ask OpenAI" android:layout_marginStart="8dp"/>
+     <Button android:id="@+id/btnAskGrok" android:text="Ask Grok" android:layout_marginStart="8dp"/>
+     <Button android:id="@+id/btnAskGemini" android:text="Ask Gemini" android:layout_marginStart="8dp"/>
+   </LinearLayout>
+   <TextView android:text="Threads (placeholders):" android:paddingTop="12dp"/>
+   <LinearLayout android:orientation="horizontal">
+     <Button android:id="@+id/btnNewThread" android:text="New chat"/>
+     <Button android:id="@+id/btnSwitchThread" android:text="Switch" android:layout_marginStart="8dp"/>
+   </LinearLayout>
+   <TextView android:id="@+id/status" android:text="სტატუსი: მზად" android:paddingTop="12dp"/>
+   <TextView android:id="@+id/unified" android:text="Unified answer გამოჩნდება აქ" android:paddingTop="8dp"/>
+   <TextView android:id="@+id/rawOpenAI" android:text="OpenAI: —" android:paddingTop="8dp"/>
+   <TextView android:id="@+id/rawGrok" android:text="Grok: —" android:paddingTop="4dp"/>
+   <TextView android:id="@+id/rawGemini" android:text="Gemini: —" android:paddingTop="4dp"/>
+ </LinearLayout>
+</ScrollView>
